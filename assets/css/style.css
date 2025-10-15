@@ -13,23 +13,47 @@ body {
     font-family: "Cinzel Regular";
     background-color: #0B0D10;
     color: white;
-    text-transform: capitalize
+    overflow: visible;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #0b0d10af;
+    backdrop-filter: blur(10px);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: "Cinzel Bold";
 }
 
 h2 {
     color: #BD9C5E;
+    margin-top: 0;
+    font-family: "Cinzel Bold";
 }
 .nav {
     padding: 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+}
+
+.nav li a:hover{
+    color: #DECCB3;
+    border-bottom: 1px solid #BA9857; 
 }
 
 ul {
     list-style-type: none;
-    
 }
 
 a {
@@ -38,7 +62,7 @@ a {
 }
 
 .banner {
-    background-image: url("../img/banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner.jpg");
     background-size: cover;
     background-position: center;   
     height: 60vh;
@@ -46,6 +70,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3%;
 }
 
 .logo {
@@ -56,21 +81,36 @@ a {
     text-align: center;
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 5%;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-bottom: 2%;
+}
+.card:hover {
+    bottom: 3px;
+    box-shadow: 1px 1px 1px #242935; 
 }
 
 .card {
-    width: 25%;
-
-    background-color: #11131B;
+    width: 20%;
+    background-color: #11131B;    
     position: relative;
     border-radius: 12px;
     overflow: hidden;
+    border: #2e3035 1px solid;
+    min-height: 600px;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.card h3, .card p {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .card-container .card-img {
@@ -88,23 +128,98 @@ a {
     display: flex;
     align-content: center;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
+}
+
+.mail {
     background-color: #11131B;
-}
+    border-bottom: #2A2E3A 2px solid;
+    border-top: #2A2E3A 2px solid;
+    padding: 1%;
+    padding: 2%;
+} 
 
-.footer {
+.footer-content {
     display: flex;
-    justify-content: flex-end;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 20vh;  
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
 }
 
-.footer .logo {
-    width: 5%;
+.footer-content .nav {
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer .nav {
-    justify-content: flex-end;
-    align-content: center;
+.news h2, .mail h2 {
+    text-align: center;
 }
+
+.footer-content .logo {
+    width: 6%;
+}
+
+.ensavoirplus {
+    background: linear-gradient(#C0A063, #B08B42);
+    border: 1px solid black;
+    font-family: "Cinzel Regular";
+    width: 22%;
+    padding: 0.8%;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #0B0D10;
+}
+
+.ensavoirplus:hover, .btn:hover {
+    box-shadow: 1px 1px 5px 5px #BD9C5E;
+}
+
+.info p {
+    margin-bottom: 5%;
+}
+
+.email {
+    background-color: #0B0F15;
+    border: #2A2E3A 1px solid;
+    color: #6C6C6C;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.email:hover {
+    border: #BD9C5E 1px solid;
+}
+
+.btn {
+    background: linear-gradient(#C0A063, #B08B42);
+    border: #2A2E3A 1px solid;
+    width: 10%;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.mail h2 {
+    font-size: 30px;
+}
+
+/* FOOTER */
+
+.footer-list {
+    padding: 10px 0;
+    display: flex;
+}
+
+.footer-list li a{
+    padding: 0 20px;
+}
+
+.footer-list li::after {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 1px;
+    background-color: white;
+}
+
