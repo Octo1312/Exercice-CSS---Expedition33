@@ -25,6 +25,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 h1 {
@@ -74,7 +75,7 @@ a {
 }
 
 .logo {
-    width: 25%;
+    width: 50%;
 }
 
 .info {
@@ -223,3 +224,53 @@ a {
     background-color: white;
 }
 
+@media screen and (max-width: 770px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin-left: 10%;
+        min-height: 20%;
+    }
+    
+    .email {
+        width: 35%;
+    }
+
+    .btn {
+        width: 25%;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    .footer-list {
+        padding: 5;
+        flex-direction: column;
+        margin: 0;
+        gap: 8px;
+    }
+
+    .footer-list li {
+        padding-bottom: 1%;
+        text-align: center;
+    }
+
+    .footer-list li::after {
+        background-color: #0B0D10;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .footer-content .logo {
+      width: 25%;  
+    }
+}
